@@ -1,0 +1,45 @@
+{
+  "name": "oslojs-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for synchronizing meetup.com data with Sanity",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo 'no tests yet' && exit 1",
+    "sync-all": "npm run sync-venues && npm run sync-groups && npm run sync-events && npm run sync-members",
+    "sync-venues": "node src/syncVenues.js",
+    "sync-groups": "node src/syncGroups.js",
+    "sync-events": "node src/syncEvents.js",
+    "sync-members": "node src/syncMembers.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/oslojs/scripts.git"
+  },
+  "keywords": [
+    "meetup",
+    "scripts"
+  ],
+  "author": "OsloJS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oslojs/scripts/issues"
+  },
+  "homepage": "https://github.com/oslojs/scripts#readme",
+  "devDependencies": {
+    "@sanity/core": "^0.107.17",
+    "eslint": "^4.2.0",
+    "eslint-config-sanity": "^2.1.4"
+  },
+  "dependencies": {
+    "@sanity/client": "^0.107.18",
+    "get-it": "^2.0.2",
+    "hard-rejection": "^1.0.0",
+    "lodash": "^4.17.4",
+    "meetup-api": "^1.4.21",
+    "moment-timezone": "^0.5.13",
+    "p-all": "^1.0.0",
+    "p-map": "^1.1.1",
+    "pify": "^3.0.0"
+  }
+}

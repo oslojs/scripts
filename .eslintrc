@@ -1,0 +1,5 @@
+{
+  "extends": ["sanity"],
+  "env": {"node": true, "browser": false},
+  "parserOptions": {"ecmaVersion": 2017}
+}
